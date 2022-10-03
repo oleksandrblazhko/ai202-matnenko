@@ -83,7 +83,7 @@
           },
           "photo": {
             "description": "Фото користувача",
-            "type": "BinData"" 
+            "type": "BinData"
           }
         },
         "required": [
