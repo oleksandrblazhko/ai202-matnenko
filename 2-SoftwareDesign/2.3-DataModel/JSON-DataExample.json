@@ -1,0 +1,20 @@
+{
+  "comp_list": {
+    "genre": "Гімн",
+    "comp_info": {
+      "name": "Anthem of Ukraine",
+      "author": "П.П.Чубинський, М.М.Вербицький",
+      "info": "To be added",
+      "rate": 5,
+      "words": "Усі знаємо, усі пам'ятаємо",
+      "notes": "To be added"
+    },     
+  },
+  "User": {
+    "name": "ThaumBear",
+    "photo": {}
+  },
+  "Recomendation": {
+    "text": "Більше практики!"
+  }
+}

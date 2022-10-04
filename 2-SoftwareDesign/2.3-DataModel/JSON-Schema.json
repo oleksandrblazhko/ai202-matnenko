@@ -1,0 +1,88 @@
+{
+  "description": "Опис предметної області ПП",
+  "type": "object",
+  "properties": {
+    "comp_list": {
+      "description": "Список композицій",
+      "type": "object",
+      "properties": {
+        "genre": {
+          "description": "Жанр",
+          "type": "string"
+        },
+        "comp_info": {
+          "description": "Інформація про композицію",
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Назва",
+              "type": "string"
+            },
+            "author": {
+              "description": "Автор",
+              "type": "string"
+            },
+            "info": {
+              "description": "Докладний опис",
+              "type": "string"
+            },
+            "rate": {
+              "description": "Рейтинг",
+              "type": "number"
+            },
+            "words": {
+              "description": "Слова",
+              "type": "string"
+            },
+            "notes": {
+              "description": "Ноти",
+              "type": "string"
+            }
+          },
+          "required": [
+            "name",
+            "author",
+            "info",
+            "rate",
+            "words",
+            "notes"
+          ]
+        },
+      },
+      "required": [
+        "genre"
+      ]
+    },
+    "User": {
+        "description": "Користувач",
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Ім'я користувача",
+            "type": "string"
+          },
+          "photo": {
+            "description": "Фото користувача",
+            "type": "BinData"
+          }
+        },
+        "required": [
+          "name",
+          "photo"
+        ]
+    },
+    "Recomendation": {
+        "description": "Рекомендації щодо покращення виконання",
+        "type": "object",
+        "properties": {
+          "text": {
+            "description": "Текст"
+            "type": "string"
+          }
+        },
+        "required": [
+          "text"
+        ]
+     }
+   }
+}
