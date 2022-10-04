@@ -6,21 +6,9 @@
       "description": "Список композицій",
       "type": "object",
       "properties": {
-        "name": {
-          "description": "Назва композиції",
-          "type": "string"
-        },
-        "author": {
-          "description": "Автор",
-          "type": "string"
-        },
         "genre": {
           "description": "Жанр",
           "type": "string"
-        },
-        "rate": {
-          "description": "Рейтинг",
-          "type": "number"
         },
         "comp_info": {
           "description": "Інформація про композицію",
@@ -32,10 +20,6 @@
             },
             "author": {
               "description": "Автор",
-              "type": "string"
-            },
-            "genre": {
-              "description": "Жанр",
               "type": "string"
             },
             "info": {
@@ -58,7 +42,6 @@
           "required": [
             "name",
             "author",
-            "genre",
             "info",
             "rate",
             "words",
@@ -67,10 +50,7 @@
         },
       },
       "required": [
-        "name",
-        "author",
-        "genre",
-        "rate"
+        "genre"
       ]
     },
     "User": {
