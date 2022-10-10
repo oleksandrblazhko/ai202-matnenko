@@ -4,7 +4,7 @@
   "properties": {
     "comp_list": {
       "description": "Список композицій",
-      "type": "object",
+      "type": "array",
       "properties": {
         "genre": {
           "description": "Жанр",
@@ -33,8 +33,8 @@
             "rate": {
               "description": "Рейтинг",
               "type": "number",
-                   "minLength": 0,
-                   "maxLength": 5
+                   "minimum": 0,
+                   "maximum": 5
             },
             "words": {
               "description": "Слова",
@@ -50,6 +50,7 @@
           "required": ["name", "author", "info", "rate", "words", "notes"]
         },
       },
+      "uniqueItems": true
       "required": ["genre"]
     },
     "User": {
