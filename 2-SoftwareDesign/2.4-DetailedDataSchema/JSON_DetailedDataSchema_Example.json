@@ -9,7 +9,8 @@
         "genre": {
           "description": "Жанр",
           "type": "string",
-              "maxLength": 32
+              "maxLength": 32,
+              pattern: "[A-Za-z]"
         },
         "comp_info": {
           "description": "Інформація про композицію",
