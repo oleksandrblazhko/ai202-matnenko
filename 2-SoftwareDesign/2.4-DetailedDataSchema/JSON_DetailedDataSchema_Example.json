@@ -1,0 +1,88 @@
+{
+  "description": "Опис предметної області ПП",
+  "type": "object",
+  "properties": {
+    "comp_list": {
+      "description": "Список композицій",
+      "type": "array",
+      "properties": {
+        "genre": {
+          "description": "Жанр",
+          "type": "string",
+              "maxLength": 32,
+               "pattern": "[A-Za-z]"
+        },
+        "comp_info": {
+          "description": "Інформація про композицію",
+          "type": "object",
+          "properties": {
+            "name": {
+              "description": "Назва",
+              "type": "string",
+                  "maxLength": 64
+            },
+            "author": {
+              "description": "Автор",
+              "type": "string",
+                  "maxLength": 128
+            },
+            "info": {
+              "description": "Докладний опис",
+              "type": "string",
+                  "maxLength": 512
+            },
+            "rate": {
+              "description": "Рейтинг",
+              "type": "number",
+                   "minimum": 0,
+                   "maximum": 5
+            },
+            "words": {
+              "description": "Слова",
+              "type": "string",
+                  "maxLength": 1024
+                  "pattern": "[A-Za-z]"
+            },
+            "notes": {
+              "description": "Ноти",
+              "type": "string",
+                  "maxLength": 1024
+            }
+          },
+          "required": ["name", "author", "info", "rate", "words", "notes"]
+        },
+      },
+      "uniqueItems": true
+      "required": ["genre"]
+    },
+    "User": {
+        "description": "Користувач",
+        "type": "object",
+        "properties": {
+          "name": {
+            "description": "Ім'я користувача",
+            "type": "string",
+                "maxLength": 128
+          },
+          "photo": {
+            "description": "Фото користувача",
+            "type": "string",
+                "maxLength": 2000
+          }
+        },
+        "required": ["name", "photo"]
+    },
+    "Recomendation": {
+        "description": "Рекомендації щодо покращення виконання",
+        "type": "object",
+        "properties": {
+          "text": {
+            "description": "Текст",
+            "type": "string",
+                "maxLength": 1024
+          }
+        },
+        "required": ["text"]
+     }
+   }
+}
