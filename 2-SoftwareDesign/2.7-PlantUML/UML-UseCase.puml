@@ -1,0 +1,14 @@
+@startuml
+
+title UseСaseDiagram
+actor "Споживач-музикант" as act #Blue
+
+rectangle System {
+    usecase (Отримати інформацію\n про музику) as use1 #LightBlue
+    usecase (Авторизувати користувача) as use2 #Pink
+
+    act -- use1
+    use1 .> use2 : include
+}
+
+@enduml
