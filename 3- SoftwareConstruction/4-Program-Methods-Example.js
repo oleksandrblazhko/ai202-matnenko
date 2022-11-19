@@ -19,7 +19,7 @@ async function searchCompose(request_ID, request, res) {
 }
 
 //вивід обраної користувачем композиції
-async function selectCompose(request, res) {
+async function selectCompose(composeList, request, res) {
     await client.connect();
     const db = client.db('Project');
     const collection = await db.collection("Обрана композиція");
