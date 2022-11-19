@@ -13,7 +13,6 @@ async function searchCompose(request_ID, request) {
     const collection = await db.collection("Списки композицій, скомпоновані за жанром");
     const composeList = await collection.find().toArray();
     await client.close();
-    console.log(composeList);
     return composeList;
 }
 
@@ -24,6 +23,5 @@ async function selectCompose(composeList, request) {
     const collection = await db.collection("Обрана композиція");
     Composition composition = await collection.find();
     await client.close();
-    console.log(composition);
     return composition;
 }
