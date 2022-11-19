@@ -25,5 +25,5 @@ async function selectCompose(composeList, request) {
     Composition composition = await collection.find();
     await client.close();
     console.log(composition);
-    return composition
+    return composition;
 }
