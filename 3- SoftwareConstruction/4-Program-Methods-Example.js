@@ -17,8 +17,7 @@ async function searchCompose (requestID, request) {
   const collection = await db.collection('Списки композицій, скомпоновані за жанром')
   const composeList = await collection.find().toArray()
   await client.close()
-  console.log(composeList)
-  return 1
+  return composeList
 }
 
 //вивід обраної користувачем композиції
