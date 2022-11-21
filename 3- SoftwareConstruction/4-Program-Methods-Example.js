@@ -3,6 +3,9 @@ import { client, db } from './user.js'
 //вивід списків композицій, скомпонованих за жанром
 
 async function searchCompose (requestID, request) {
+  if ((requestID !== 0 || requestID !== 1) && (request.length < 1 || request.length > 64)) {
+    return -3
+  }
   if (requestID !== 0 || requestID !== 1) {
     return -1
   }
@@ -14,7 +17,8 @@ async function searchCompose (requestID, request) {
   const collection = await db.collection('Списки композицій, скомпоновані за жанром')
   const composeList = await collection.find().toArray()
   await client.close()
-  return composeList
+  console.log(composeList)
+  return 1
 }
 
 //вивід обраної користувачем композиції
