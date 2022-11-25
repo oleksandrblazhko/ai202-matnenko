@@ -69,5 +69,4 @@ async function test() {
     else console.log('Failed...');
 }
 
-console.log('Test:');
 test();
